@@ -1,0 +1,12 @@
+aplicación: webos
+versión 1
+tiempo de ejecución: php55
+api_version: 1
+multi-hilo: true
+ 
+manipuladores:
+- Url: / handle_upload
+  guión: handle_upload.php
+ 
+- Url: *.
+  guión: index.php
