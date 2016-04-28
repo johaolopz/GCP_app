@@ -1,12 +1,19 @@
-aplicación: webos
-versión 1
-tiempo de ejecución: php55
+application: WebOSpro
+version: alpha-001
+runtime: php55
 api_version: 1
-multi-hilo: true
  
 manipuladores:
-- Url: / handle_upload
-  guión: handle_upload.php
- 
-- Url: *.
+
+- url: /
   guión: index.php
+  
+- url: /style
+  static_dir: stylesheets
+  
+- url: /imag
+  static_dir: static/images
+  
+- url: /(.*\.(gif|png|jpg))$
+  static_files: static/\1
+  upload: static/.*\.(gif|png|jpg)$
